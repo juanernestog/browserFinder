@@ -3,7 +3,7 @@ const app = express();
 app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
-  res.send(`<h1>Hola ${req.headers['user-agent']}!</h1>`);
+  res.send(`<h1>${req.headers['user-agent']}</h1>`);
   console.log(req.header['user-agent']);
 });
 
